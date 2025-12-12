@@ -46,7 +46,7 @@
 #     except Exception as e:
 #         return {"error": f"API error: {str(e)}"}
 
-# @app.websocket("/ws")
+# @app.websocket("/wss")
 # async def websocket_endpoint(websocket: WebSocket):
 #     """WebSocket for continuous audio stream processing"""
 #     await websocket.accept()
@@ -424,7 +424,7 @@
 
 #         function connectWebSocket() {
 #             if (websocket && websocket.readyState === WebSocket.OPEN) return;
-#             websocket = new WebSocket('ws://' + window.location.host + '/ws');
+#             websocket = new WebSocket('wss://' + window.location.host + '/wss');
             
 #             websocket.onopen = function() {
 #                 wsStatus.textContent = '⚡ WS CONNECTED';
